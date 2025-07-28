@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 p.517연습</title>
+</head>
+
+<body>
+
+    <p id="result">출력</p>
+    <p id="result2">출력222</p>
+
+    <script>
+        //선언부
+        let spring = "봄"
+        let summer = "여름"
+        let fall = "가을"
+        let winter = "겨울"
+        let result
+        let result2
+
+        //구현부
+        result = "3월은 " + spring + ", 8월은 " + summer + ", 10월은 " + fall + ", 1월은 " + winter + "이다."
+        result2 =`${spring}은 따뜻해! ${summer}은 뜨거워 ${fall}은 시원해 ${winter}은 추워`
+
+        //출력부
+        console.log(result)
+        console.log(result2)
+        document.getElementById("result").innerText = result
+        document.getElementById("result2").innerHTML = `<h2>${result2}</h2>`
+
+    </script>
+</body>
+
+</html>
