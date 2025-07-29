@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 복습_변수</title>
+</head>
+<body>
+    <p id="result">결과</p>
+
+    <script>
+        //------변수 선언-----
+        // 상수: 항상 같은수
+        const num0 = 0;
+        // 변수: var, let
+        let xx
+        let yy
+        let zz
+        let num1, num2, result 
+
+        //변수 선언과 초기화
+        let str = "지현"
+
+        // 초기화
+        xx = 0; yy = 0; zz = 0; 
+        num1 = 10
+        num2 = 20
+        result = 0
+        
+        result = num1 + num2
+        console.log(result)
+        //`백틱을 사용한 ${result}출력템플릿
+        console.log(`두 수의 합은: ${result}`)
+        document.getElementById("result").innerHTML = "두 수의 합은: " + result
+        document.getElementById("result").innerHTML = `두 수의 합은2: ${result}`
+    </script>
+</body>
+</html>
