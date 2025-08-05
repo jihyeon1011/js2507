@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_listener_1</title>
+    <style>
+        .memo{
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>자바스크립트 addEventListener()</h2>
+    <p>이 예제는 addEventListener() 메서드를 사용하여 버튼에 클릭 이벤트를 연결 합니다.</p>
+    <p class="memo">Try! (displayDate함수)</p>
+    <button id="myBtn">Try</button>
+    <p id="demo"></p>
+    <hr>
+    <p class="memo">Try! (익명함수, 즉각실행, alert))</p>
+    <button id="myBtn2">Try</button>
+    <hr>
+    <p class="memo">Try! (흐름의 순서대로 실행됩니다.)</p>
+    <button id="myBtn3">Try</button>
+    <hr>
+    <p class="memo">Try (여러가지 이벤트)</p>
+    <button id="myBtn4">Try</button>
+    <p id="demo4"></p>
+
+    <script>
+        let myBtn = document.getElementById("myBtn")
+        let demo = document.getElementById("demo")
+
+        let myBtn2 = document.getElementById("myBtn2")
+
+        let myBtn3 = document.getElementById("myBtn3")
+
+        let myBtn4 = document.getElementById("myBtn4")
+        let demo4 = document.getElementById("demo4")
+
+        function displayDate() {
+            demo.innerHTML = Date();
+            //alert(Date())
+        }
+        //case1 이벤트리스너가 클릭이벤트를 듣고 있다가,
+        //이벤트가 발생하면 displayDate 함수를 실행한다.
+        myBtn.addEventListener("click", displayDate);
+
+        //case 2 이벤트리스너가 클릭이벤트를 듣고 있다가,
+        //이벤트가 발생하면 익명함수를 즉각 실행한다.
+        myBtn2.addEventListener("click", function(){ alert("Hellow World!");})
+
+        //case3 이벤트리스너가 클릭이벤트를 듣고 있다가,
+        //이벤트가 발생하면 흐름의 순서대로 함수를 실행시킨다.
+        function myFunction(){
+            alert("Hello World!")
+        }
+        function someOtherFunction(){
+            alert("This function was also executed!");
+        }
+        myBtn3.addEventListener("click", myFunction)
+        myBtn3.addEventListener("click", someOtherFunction)
+
+        //case4 오버, 아웃, 클릭이벤트를 리스너에 등록
+        function myOver() {
+            demo4.innerHTML = "마우스 오버"
+        }
+        function myClick() {
+            demo4.innerHTML = "마우스 클릭"
+        }
+        function myOut() {
+            demo4.innerHTML = "마우스 아웃"
+        }
+        myBtn4.addEventListener("mouseover", myOver)
+        myBtn4.addEventListener("click", myClick)
+        myBtn4.addEventListener("mouseout", myOut)
+    </script>
+</body>
+
+</html>

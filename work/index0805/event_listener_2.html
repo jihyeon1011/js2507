@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_listener_2</title>
+</head>
+<body>
+    <h2>자바스크립트 addEventListener()</h2>
+    <p>이 예제에서는 window 객체에 addEventListener() 메서드를 사용합니다.</p>
+    <p>"크기 조정" 이벤트 / 이 브라우저 창의 크기를 조정해보세요.</p>
+    <p id="demo"></p>
+
+    <script>
+        window.addEventListener("resize",function(){
+            document.getElementById("demo").innerHTML = Math.random();
+        });
+    </script>
+</body>
+</html>

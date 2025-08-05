@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_listener_4</title>
+    <style>
+        #myDiv1,
+        #myDiv2 {
+            background-color: skyblue;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        #myP1,
+        #myP2 {
+            background-color: white;
+            font-size: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p> P누를때:버블링은 자식=>부모, 캡처링은 부모=>자식 <br>
+        div누를때: div만 반응
+    </p>
+    <div id="myDiv1">
+        <h2>버블링:</h2>
+        <p id="myP1">클릭!</p>
+    </div>
+    <div id="myDiv2">
+        <h2>캡처링:</h2>
+        <p id="myP2">클릭!</p>
+    </div>
+
+    <script>
+        document.getElementById("myP1").addEventListener("click",
+            function () { alert("화이트 요소를 클릭했습니다!"); }, false);
+        document.getElementById("myDiv1").addEventListener("click",
+            function () { alert("스카이블루 요소를 클릭했습니다!"); }, false);
+        document.getElementById("myP2").addEventListener("click",
+            function () { alert("화이트 요소를 클릭했습니다!"); }, true);
+        document.getElementById("myDiv2").addEventListener("click",
+            function () { alert("스카이블루 요소를 클릭했습니다!"); }, true);
+    </script>
+</body>
+
+</html>

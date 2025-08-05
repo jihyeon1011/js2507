@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_listener_3</title>
+</head>
+
+<body>
+    <h2>자바스크립트 addEventListener()</h2>
+    <p>이 예제에서는 addEventListener() 메서드를 사용할 때 매개변수 값을 전달하는 방법을 보여줍니다.</p>
+    <p>버튼을 클릭하여 계산을 실행하세요_5 * 7</p>
+    <button id="myBtn">Try</button>
+    <p id="demo"></p>
+
+    <script>
+        let p1 = 5;
+        let p2 = 7;
+        document.getElementById("myBtn").addEventListener("click",
+            function () { myFunction(p1, p2); });
+        function myFunction(a, b) {
+            document.getElementById("demo").innerHTML = a * b;
+        }
+    </script>
+</body>
+
+</html>
