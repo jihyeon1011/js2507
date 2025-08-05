@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_node_3</title>
+</head>
+<body>
+    <h2>~html 요소를 제거하기~</h2>
+
+    <div>
+        <p id="P1">이것은 제거될 문단</p>
+        <p id="P2">이것은 또 다른 문단</p>
+    </div>
+    <button onclick="myFunction()"> 요소 제거 </button>
+
+    <script>
+        function myFunction(){
+            document.getElementById("P1").remove();
+        }
+    </script>
+</body>
+</html>

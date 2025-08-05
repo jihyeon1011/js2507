@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_node_2</title>
+</head>
+<body>
+    <h2>~새로운 html 요소를 앞에 추가하기~</h2>
+
+    <div id="div1">
+        <p id="p1">이것은 문단</p>
+        <p id="p2">이것은 또 다른 문단</p>
+    </div>
+
+    <script>
+        const myP = document.createElement("p");
+        const myTxt = document.createTextNode("이것은 추가한 새 문단!!");
+        myP.appendChild(myTxt);
+
+        const element = document.getElementById("div1");
+        const child = document.getElementById("p1");
+        element.insertBefore(myP,child);
+    </script>
+</body>
+</html>

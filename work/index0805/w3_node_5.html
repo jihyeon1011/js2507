@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_node_4</title>
+</head>
+<body>
+    <h2>~HTML 요소 교체하기~</h2>
+    <p>~원래 있던 문장이 replaceChild통해 교체당함~</p>
+
+    <div id="div1">
+        <p id="P1">이것은 교체될 문단</p>
+        <p id="P2">이것은 또 다른 문단</p>
+    </div>
+
+    <script>
+        const parent = document.getElementById("div1");
+        const child = document.getElementById("P1");
+        const myP = document.createElement("p");
+        const myTxt = document.createTextNode("이것은 교체된 문단");
+        myP.appendChild(myTxt);
+        parent.replaceChild(myP,child);
+    </script>
+</body>
+</html>

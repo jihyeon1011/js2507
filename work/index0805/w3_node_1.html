@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_node_1</title>
+</head>
+<body>
+    <h2>~새로운 html 요소를 추가하기~</h2>
+
+    <div id="div1">
+        <p id="p1">이것은 문단</p>
+        <p id="p2">이것은 또 다른 문단</p>
+    </div>
+
+    <script>
+        let d = document;
+        let div1 = d.getElementById("div1");
+        const myP = d.createElement("p");
+        const myTxt = d.createTextNode("이것은 추가한 새 문단!!");
+        myP.appendChild(myTxt);
+        div1.appendChild(myP);
+    </script>
+</body>
+</html>
