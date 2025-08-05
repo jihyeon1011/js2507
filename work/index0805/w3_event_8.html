@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_8</title>
+</head>
+<body>
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onmouseover / onmouseout 속성</h2>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="background-color: lightsteelblue; width: 120px;
+    padding: 40px; text-align: center;">Mouse Over Me</div>
+
+    <script>
+        function mOver(obj){
+            obj.innerHTML = "Thank You"
+        }
+        function mOut(obj){
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+</body>
+</html>

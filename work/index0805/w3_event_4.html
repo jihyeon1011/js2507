@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_4</title>
+</head>
+<body>
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onclick 이벤트</h2>
+    <p>"Try"를 클릭해서 displayDate()함수를 실행하세요!</p>
+    <button id="myBtn">Try</button>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("myBtn").onclick = displayDate;
+
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

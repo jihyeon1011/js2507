@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_css_1</title>
+</head>
+<body>
+    <p> HTML 스타일 변경: </p>
+    <p id="p1">Hello World!</p>
+    <p id="p2">Hello World!</p>
+
+    <script>
+        // document.getElementById("p2").style.color = "blue";
+        // document.getElementById("p2").style.fontFamily = "Arial";
+        // document.getElementById("p2").style.fontSize = "larger";
+
+        let p2 = document.getElementById("p2")
+        let p2_sty = p2.style
+        p2.style.color = "lightblue"
+        p2_sty.fontSize = "larger"
+        
+
+    </script>
+</body>
+</html>

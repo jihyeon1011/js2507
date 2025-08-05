@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_7</title>
+</head>
+<body>
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onchange 속성</h2>
+    이름:
+    <input id="fname" type="text" onchange="upperCase()">
+    <p>입력 필드를 벗어나면 함수가 입력 내용을 대문자로 변환합니다.</p>
+
+    <script>
+        function upperCase(){
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

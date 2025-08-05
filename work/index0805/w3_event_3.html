@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_3</title>
+</head>
+<body>
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onclick 속성: </h2>
+    <p>버튼을 클릭하면 시간이 표시됩니다!</p>
+    <button onclick="displayDate()">현재 시각은?</button>
+    <p id="demo"></p>
+
+    <script>
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

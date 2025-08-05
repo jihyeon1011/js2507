@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_form_2</title>
+</head>
+<body>
+    <h2>자바스크립트 검증2</h2>
+    <p> 1에서 10 사이의 숫자를 입력하세요: </p>
+    <input id="numb">
+    <button type="button" onclick="myFunction()">제출</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction(){
+            let x = document.getElementById("numb").value;
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "유효하지 않은 입력입니다.";
+            }
+            else{
+                text = "입력 OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

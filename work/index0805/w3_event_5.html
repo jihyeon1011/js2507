@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_5</title>
+</head>
+<body onload="checkCookies()">
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onload 속성</h2>
+    <p id="demo"></p>
+    
+    <script>
+        function checkCookies(){
+            let text = "";
+            if (navigator.cookieEnabled == true) {
+                text = "쿠키가 활성화 되었습니다."
+            } 
+            else {
+                text = "쿠키가 비활성화 되었습니다."
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

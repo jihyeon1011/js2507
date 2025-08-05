@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3_event_9</title>
+</head>
+<body>
+    <h1>자바스크립트 HTML 이벤트</h1>
+    <h2>onmousedown / onmouseup 속성</h2>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="background-color: lightsteelblue; width: 90px;
+    padding: 40px; text-align: center;">Click Me!</div>
+
+    <script>
+        function mDown(obj){
+            obj.style.backgroundColor = "lightyellow"
+            obj.innerHTML = "Release Me";
+        }
+        function mUp(obj){
+            obj.style.backgroundColor = "lightsteelblue"
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+</body>
+</html>
