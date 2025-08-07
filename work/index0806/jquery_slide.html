@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 메서드</title>
+    <style>
+        #panel,
+        #flip,
+        #panel2,
+        #flip2,
+        #panel3,
+        #flip3 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: 1px solid #ccc;
+        }
+
+        #panel, #panel3 {
+            padding: 50px;
+            display: none;
+        }
+        #panel2 {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">slide down/클릭!!</div>
+    <div id="panel">안녕하세요~</div>
+    <br><hr>
+    <div id="flip2">slide up/클릭!!</div>
+    <div id="panel2">안녕하세요~~</div>
+    <br><hr>
+    <div id="flip3">slide up or down</div>
+    <div id="panel3">안녕하세요~~~</div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#flip").click(function () {
+            $("#panel").slideDown("slow");
+        });
+
+        $("#flip2").click(function () { 
+            $("#panel2").slideUp("slow");
+        });
+        $("#flip3").click(function () { 
+            $("#panel3").slideToggle("slow");
+        });
+    </script>
+</body>
+
+</html>

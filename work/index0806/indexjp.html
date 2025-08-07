@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>숨기기를 누르면 사라질거야!</p>
+
+    <button id="hide">숨기기</button>
+    <button id="show">보여주기</button>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>    
+    <script>
+        // $("#hide").click(함수(기능)) 
+        $("#hide").click(function () { 
+            $("p").hide(); 
+        });
+        // $("#show").click(함수(기능))
+        $("#show").click(function(){
+            $("p").show();
+        });
+    </script>
+</body>
+
+</html>
