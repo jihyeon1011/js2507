@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="myRoot"></div>
+
+<script type="text/babel">
+        //차 컴포넌트 구성부
+        function Car(props){
+            return(
+                <>
+                <h2>안녕.. 마이 빵빵이 색상은{props.color}</h2>
+                <p>---{props.name}---오늘도 안전운전~~!!</p>
+                </>
+            )
+        }
+        //차고 컴포넌트 구성부
+        function Garage(){
+            return(
+                <>
+                <h1>내 차고에는 어떤 차가 있을까</h1>
+                <Car color = "red" name="1"/>
+                <Car color = "blue" name="2"/>
+                <Car color = "green" name="3"/>
+                </>
+            )
+        }
+        const root 
+        = ReactDOM.createRoot(
+            document.getElementById("myRoot")
+        )
+
+        root.render(<Garage />)
+        //root.render(<Car color="red" />)
+
+    </script>
+</body>
+
+</html>
